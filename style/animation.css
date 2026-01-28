@@ -18,3 +18,18 @@
     0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+@keyframes mouseMove {
+    0%, 100% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(3px); opacity: 1; }
+}
+
+section.main-visual .scroll_div .mouse { animation: mouseMove 1.5s ease-in-out infinite alternate; }
+section.main-visual .scroll_div .scroll_1 { animation: blink 1.5s ease-in-out infinite; }
+section.main-visual .scroll_div .scroll_2 { animation: blink 1.5s ease-in-out 0.5s infinite; }
+section.main-visual .scroll_div .scroll_3 { animation: blink 1.5s ease-in-out 0.8s infinite; }
+section.main-visual .scroll_div .scroll_text { animation: blink 1.5s ease-in-out  infinite; }

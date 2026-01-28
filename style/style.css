@@ -2,16 +2,23 @@
 
 /* 색 설정 */
 :root {
-    --main-color: #CF2E41;
-    --black-color : #222;
+    --main-color: #3772C2;
+    --black-color : #333;
     --white-color : #fff;
+    --lemon-color : #FFF9C4;
+    --white-blue-gradient-color : linear-gradient(125deg, #EBF5FF 29.23%, #93ADC9 100%);;
+    --white-gradient-color : linear-gradient(180deg, #EAEEF4 0%, #CDCDCD 100%);
+    --blue-gradient-color : linear-gradient(101deg, #1A365C 1.43%, #3772C2 100%);
+    --black-gradient-color : linear-gradient(96deg, #000 2.67%, #464646 100%);
 }
 
 /* size */
-@media screen and (max-width: 1250px) { } /* tablet */
-@media screen and (max-width: 650px) { } /* mobile */
+@media screen and (max-width: 1440px) { } /* tablet */
+@media screen and (max-width: 1280px) { } /* mobile */
 
-@media screen and (max-width: 1250px) { 
+.inner{ width:1440px; margin:0 auto; }
+
+@media screen and (max-width: 1440px) { 
     .inner{ width:100%; padding:0 10px; }
 } /* tablet */
 @media screen and (max-width: 650px) { 
@@ -19,11 +26,11 @@
 } /* mobile */
 
 /* 스크롤 커스텀 */
-/* html::-webkit-scrollbar {width: 8px;}
-html::-webkit-scrollbar-thumb {background-color: var(--main-color); border-radius: 10px;} */
+html::-webkit-scrollbar {width: 8px;}
+html::-webkit-scrollbar-thumb {background: var(--blue-gradient-color); border-radius: 10px;}
 
 /* 드래그 블록 커스텀 */
-/* ::selection { background-color:var(--main-color); color:#fff; } */
+::selection { background-color:var(--main-color); color: var(--lemon-color); }
 
 
 /* default */
@@ -35,14 +42,17 @@ html::-webkit-scrollbar-thumb {background-color: var(--main-color); border-radiu
     box-sizing: border-box;
     letter-spacing: inherit;
     line-height: inherit;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-body{ font-family: 'Pretendard', sans-serif; font-weight: 400; font-size: 16px; letter-spacing: -0.04em; }
-section{ display:block; }
+body{ font-family: 'Pretendard', sans-serif; font-weight: 400; font-size: 16px; letter-spacing: -0.04em; color: var(--black-color); }
 a{ color:inherit; }
-p { word-break: keep-all; font-weight: 500; }
+p { word-break: keep-all;  }
 b { font-weight: 700; }
-.inner{ width:1200px; margin:0 auto; }
+img { max-width: 100%; vertical-align: top; }
 
 .paging_box{ padding:10px 0; display:flex; align-items: center; justify-content: center; }
 
@@ -52,8 +62,56 @@ select{
 }
 select::-ms-expand{ display:none; }
 
+/* font */
+.font-rw { font-family: "Raleway", sans-serif; }
+.font-of { font-family: "Outfit", sans-serif; }
+
+/* common */
 
 /* @ header @ */
+header { padding: 15px 0; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05); background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(10px); }
+header .inner {  }
+header .header-wrap { display: flex; align-items: center; justify-content: space-between; }
+header .header-wrap .header-logo {  }
+header .header-wrap ul { display: flex; align-items: center; gap: 40px; }
+header .header-wrap ul li { font-size: 20px; font-family: "Outfit", sans-serif; }
+
 /* @ main @ */
-/* @ footer @ */
+main {  }
+main p { animation: font-size 300ms; display: inline-block; }
+.sec { min-height: 100vh; }
+
+/* --- main-visual section --- */
+section.main-visual { position: relative; display: flex; align-items: center; justify-content: center; background: var(--white-blue-gradient-color); }
+section.main-visual .inner { }
+section.main-visual .wrap { padding-bottom: 100px; display: flex; flex-direction: column; align-items: center; }
+section.main-visual .wrap .main-visual-title { margin: 40px 0 30px; display: inline-block; font-size: 96px; font-weight: 600; font-family: "Raleway", sans-serif; background: linear-gradient(90deg, #5188DC 0%, #3B65A2 80%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+section.main-visual .wrap .main-visual-text {  font-size: 48px; font-family: "Outfit", sans-serif; font-weight: 300; }
+
+/* 마우스 애니메이션 */
+section.main-visual .scroll_div { position: absolute; bottom: 60px; display: flex; align-items: center; justify-content: center;  flex-direction: column; }
+section.main-visual .scroll_div .mouse {  }
+section.main-visual .scroll_div .scroll_box { margin: 10px 0 15px; display: flex;flex-direction: column; align-items: center; }
+section.main-visual .scroll_div .scroll {  }
+section.main-visual .scroll_div .scroll_text {  }
+
+/* --- overview section --- */
+#canvas-basic { position: absolute; display: block; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
+section.overview { background: var(--blue-gradient-color); color: var(--white-color); }
+section.overview .wrap {  }
+section.overview .wrap ul { display: grid; grid-template-columns: repeat(2, 1fr); }
+section.overview .wrap ul li { height: 50vh; display: flex; align-items: center; justify-content: center;  gap: 40px; }
+section.overview .wrap ul li:nth-of-type(1) { border-bottom: 1px solid var(--white-color); border-right: 1px solid var(--white-color); }
+section.overview .wrap ul li:nth-of-type(2) { border-bottom: 1px solid var(--white-color); }
+section.overview .wrap ul li:nth-of-type(3) { border-right: 1px solid var(--white-color); }
+section.overview .wrap ul li .item { display: flex; flex-direction: column; gap: 40px; }
+section.overview .wrap ul li .item .box1 { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+section.overview .wrap ul li .item .box2 { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+section.overview .wrap ul li .item .number {  }
+section.overview .wrap ul li .item .overview-title { font-size: 42px; font-family: "Raleway", sans-serif; }
+section.overview .wrap ul li .item .overview-text { font-size: 24px; font-weight: 300; font-family: "Outfit", sans-serif; }
+
+/* --- project section --- */
+/* --- effect section --- */
+/* --- about section --- */
 

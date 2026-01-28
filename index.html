@@ -21,12 +21,134 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
     </head>
     <body>
-        <main id="smooth-wrapper">
-            <article id="smooth-content">
-                
-            </article>
+        <header>
+            <div class="inner">
+                <div class="header-wrap">
+                    <a href="./index.html">
+                        <img src="./img/header/insu.png" alt="헤더로고" class="header-logo">
+                    </a>
+                    <ul>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a href="https://www.figma.com/design/Q9lnBlcwpUgaSxZiZLjzK8/%EC%9D%B8%EC%88%98--------%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=4742-16366&t=pGHPSOEu8PDvBsUo-1" target="_blank">
+                                <img src="./img/header/figma.svg" alt="figma">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/1nnsu" target="_blank">
+                                <img src="./img/header/github.svg" alt="github">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- 반응형 미완 -->
+            <section class="sec main-visual">
+                <div class="inner">
+                    <div class="wrap">
+                        <img src="./img/main/1-main-visual/insu.png" alt="메인비주얼로고" class="main-visual-logo">
+                        <p class="main-visual-title">Web Studio</p>
+                        <p class="main-visual-text">" Always on trend, always creative "</p>
+                        <div class="scroll_div">
+                            <img src="./img/main/1-main-visual/mouse.png" alt="마우스" class="mouse">
+                            <div class="scroll_box">
+                                <img src="./img/main/1-main-visual/scroll_1.png" alt="스크롤1" class="scroll scroll_1">
+                                <img src="./img/main/1-main-visual/scroll_2.png" alt="스크롤2" class="scroll scroll_2">
+                                <img src="./img/main/1-main-visual/scroll_3.png" alt="스크롤3" class="scroll scroll_3">
+                            </div>
+                            <img src="./img/main/1-main-visual/scroll_text.png" alt="스크롤 텍스트" class="scroll_text">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 반응형 미완 -->
+            <section class="sec overview">
+                <!-- <canvas id="canvas-basic"></canvas> -->
+                <div class="wrap">
+                    <ul>
+                        <li class="">
+                            <div class="item">
+                                <div class="box1">
+                                    <img src="./img/main/2-overview/number-1.png" alt="number1" class="number">
+                                    <p class="overview-title">Design</p>
+                                </div>
+                                <div class="box2">
+                                    <p class="overview-text">Photoshop ・ Illustrator</p>
+                                    <p class="overview-text">Figma & UI ・ UX</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item">
+                                <div class="box1">
+                                    <img src="./img/main/2-overview/number-2.png" alt="number1" class="number">
+                                    <p class="overview-title">Publishing</p>
+                                </div>
+                                <div class="box2">
+                                    <p class="overview-text">HTML ・ CSS</p>
+                                    <p class="overview-text">Java Script</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item">
+                                <div class="box1">
+                                    <img src="./img/main/2-overview/number-3.png" alt="number1" class="number">
+                                    <p class="overview-title">Hybrid Work</p>
+                                </div>
+                                <div class="box2">
+                                    <p class="overview-text">Design & Publishing</p>
+                                    <p class="overview-text">Interactive</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item">
+                                <div class="box1">
+                                    <img src="./img/main/2-overview/number-4.png" alt="number1" class="number">
+                                    <p class="overview-title">Responsive Web</p>
+                                </div>
+                                <div class="box2">
+                                    <p class="overview-text">Landing page</p>
+                                    <p class="overview-text">Website</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 미완 -->
+            <section class="sec project"></section>
+            <!-- 미완 -->
+            <section class="sec effect"></section>
+            <!-- 미완 -->
+            <section class="sec about">
+                <div class="inner">
+                    <div class="title-box">
+                        <img src="./img/" alt="" class="title-name">
+                    </div>
+                </div>
+            </section>
         </main>
+        <script>
+
+            const lenis = new Lenis({
+            duration: 2.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(10, -10 * t)),
+            });
+
+            function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+            
+        </script>
     </body>
 </html>
