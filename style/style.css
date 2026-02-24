@@ -111,7 +111,34 @@ section.overview .wrap ul li .item .number {  }
 section.overview .wrap ul li .item .overview-title { font-size: 42px; font-family: "Raleway", sans-serif; }
 section.overview .wrap ul li .item .overview-text { font-size: 24px; font-weight: 300; font-family: "Outfit", sans-serif; }
 
+/* --- project,about common-title --- */
+.sec .c-title-box { margin-bottom: 60px; }
+.sec .title-name {  }
+.sec .c-title { font-size: 48px; display: block; font-family: "Raleway", sans-serif; color: var(--white-color); }
+
 /* --- project section --- */
+section.project { background: var(--blue-gradient-color); }
+section.project .c-title {  }
 /* --- effect section --- */
+section.sec.effect { background: var(--black-gradient-color); }
+section .effect-img {  object-fit: cover; width: 100%; height: 100%; transform-origin: center center; max-width: 100%; border-radius: 20px 20px 20px 20px;  }
 /* --- about section --- */
 
+section.about { display: flex; align-items: center; justify-content: center; background: var(--black-color); color: var(--white-color); }
+section.about .about-wrap { display: flex; justify-content: space-between; align-items: center; }
+section.about .about-wrap .img-box > img { border-radius: 10px; }
+section.about .about-wrap .content-box { max-width: 950px; width: 100%; }
+section.about .about-wrap .content-box ul { display: flex; flex-direction: column; gap: 40px; }
+section.about .about-wrap .content-box ul li {  }
+section.about .about-wrap .content-box ul li:hover a { background: #222; border-bottom: 1px solid var(--lemon-color); border-radius: 5px 5px 0 0; }
+section.about .about-wrap .content-box ul li .item { display: flex; align-items: center; gap: 10px; }
+section.about .about-wrap .content-box ul li a { transition: all 300ms; padding: 10px 10px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 15px; border-bottom: 1px solid var(--white-color); }
+section.about .about-wrap .content-box ul li .item .item-text { font-size: 24px; font-family: "Outfit", sans-serif; }
+section.about .about-wrap .content-box ul .arrow-box { display: flex; align-items: center; gap: 2px; }
+section.about .about-wrap .content-box ul .arrow-box .arrow {  }
+
+
+/* @ footer @ */
+footer { padding: 50px 0; background: var(--black-color); border-top: 1px solid var(--white-color); }
+footer .wrap { display: flex; justify-content: space-between; align-items: center; }
+footer .footer-text { font-size: 14px; color: var(--white-color); font-family: "Outfit", sans-serif; }

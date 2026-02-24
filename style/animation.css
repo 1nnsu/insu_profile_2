@@ -33,3 +33,8 @@ section.main-visual .scroll_div .scroll_1 { animation: blink 1.5s ease-in-out in
 section.main-visual .scroll_div .scroll_2 { animation: blink 1.5s ease-in-out 0.5s infinite; }
 section.main-visual .scroll_div .scroll_3 { animation: blink 1.5s ease-in-out 0.8s infinite; }
 section.main-visual .scroll_div .scroll_text { animation: blink 1.5s ease-in-out  infinite; }
+
+section.about .about-wrap .content-box ul .arrow-box .arrow1 { animation: blink 1.5s ease-in-out infinite; }
+section.about .about-wrap .content-box ul .arrow-box .arrow2 { animation: blink 1.5s ease-in-out 0.5s infinite; }
+section.about .about-wrap .content-box ul .arrow-box .arrow3 { animation: blink 1.5s ease-in-out 0.8s infinite; }
+section.about .about-wrap .content-box ul .arrow-box .arrow4 { animation: blink 1.5s ease-in-out 1.1s infinite; }

@@ -1,7 +1,8 @@
 
 
 document.addEventListener("DOMContentLoaded", function(e){
-    canvas();
+    // canvas();
+    effectMotion();
 })
 
 
@@ -24,3 +25,31 @@ const canvas =() => {
         }
     });
 }
+
+// effect section
+const effectMotion = () => {
+    const slideWrap = document.querySelector('.effect');
+
+    if (!slideWrap) return;
+
+    ScrollTrigger.create({
+        trigger: slideWrap,
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+    });
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: slideWrap,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1, // 스크롤과 부드럽게 동기화
+        }
+    })
+    .fromTo(".effect-img",
+        { scale: 0.3 },  // 시작 스케일
+        { scale: 1, ease: "power2.out" } // 끝 스케일
+    );
+};
+
