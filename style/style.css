@@ -203,6 +203,15 @@ section.project .project-info ul li .item .p-title-box .p-title { padding-bottom
 section.project .project-info ul li .item .p-explain-box { display: flex; flex-direction: column; gap: 20px; }
 section.project .project-info ul li .item .p-explain-box .p-explain { font-size: 20px; font-family: 'SUIT'; }
 
+/* project 슬라이드 */
+section.project .project-slider { margin: 100px 0 50px; display: flex; flex-direction: column; gap: 20px; }
+section.project .project-slider .swiper-wrapper { transition-timing-function: linear; }
+
+section.project .project-btn { width: 160px; margin: 0 auto; }
+section.project .project-btn > a { width: 100%; display: flex; align-items: center; justify-content: center; padding: 10px 0; display: flex; align-items: center; gap: 10px; border-radius: 5px; border: 1px solid var(--black-color); }
+section.project .project-btn .img-box { display: flex; gap: 1px; align-items: center; }
+section.project .project-btn .img-box > img {  }
+
 @media screen and (max-width: 1440px) { 
     .sec .title-name { width: 80px; }
     .sec .c-title { font-size: 42px; }
@@ -210,7 +219,6 @@ section.project .project-info ul li .item .p-explain-box .p-explain { font-size:
     section.project .project-info ul { row-gap: 60px; column-gap: 60px; }
     section.project .project-info ul li .item .p-title-box .p-title { font-size: 20px; padding-bottom: 15px; }
     section.project .project-info ul li .item .p-explain-box .p-explain { font-size: 18px; }
-    
     
 } 
 @media screen and (max-width: 1024px) { 
@@ -222,11 +230,15 @@ section.project .project-info ul li .item .p-explain-box .p-explain { font-size:
     section.project .c-title-box .box-2 ul li .skill-icon { width: 28px; }
 } 
 @media screen and (max-width: 768px) {
+    section.project { padding: 15vw 0; }
     .sec .title-name { width: 64px; }
     .sec .c-title { font-size: 32px; }
     section.project .project-info ul { grid-template-columns: repeat(1, 1fr); }
     section.project .c-title-box .box-2 ul li .skill-icon { width: 24px; }
     section.project .c-title-box .box-2 ul { gap: 10px; }
+    section.project .project-btn > a { font-size: 14px; }
+    section.project .project-btn { width: 140px; }
+
 } 
 @media screen and (max-width: 480px) { 
     .sec .c-title-box { margin-bottom: 40px; }
@@ -235,16 +247,9 @@ section.project .project-info ul li .item .p-explain-box .p-explain { font-size:
     section.project .project-info ul li .item .p-explain-box { gap: 15px; }
     section.project .project-info ul li .item .p-explain-box .p-explain { font-size: 14px; }
     section.project .project-info ul li .item .p-title-box .p-title { padding-bottom: 10px; }
+    section.project .project-slider { margin: 50px 0 30px; }
 } 
 
-/* project 슬라이드 */
-section.project .project-slider { margin: 100px 0 50px; display: flex; flex-direction: column; gap: 20px; }
-section.project .project-slider .swiper-wrapper { transition-timing-function: linear; }
-
-section.project .project-btn { width: 160px; margin: 0 auto; }
-section.project .project-btn > a { width: 100%; display: flex; align-items: center; justify-content: center; padding: 10px 0; display: flex; align-items: center; gap: 10px; border-radius: 5px; border: 1px solid var(--black-color); }
-section.project .project-btn .img-box { display: flex; gap: 1px; align-items: center; }
-section.project .project-btn .img-box > img {  }
 
 
 
@@ -358,7 +363,7 @@ section.work .work-menu-box ul li {  }
 section.work .work-menu-box ul li a { font-weight: 300; }
 section.work .work-menu-box ul li a .work-menu { padding-bottom: 5px; font-size: 24px; font-family: "Outfit", sans-serif; color: #B0B0B0; }
 section.work .work-menu-box ul li a.on .work-menu { color: var(--main-color); border-bottom: 1.5px solid var(--main-color); }
-section.work .work-menu-box ul li a .work-menu.link { position: relative; }
+section.work .work-menu-box ul li a .work-menu.link { position: relative; color: #E85D75; }
 section.work .work-menu-box ul li a .work-menu.link::after { content: url('../img/sub/work/link.png'); position: absolute; top: -10px; right: -16px;}
 
 section.work .work-box {  }

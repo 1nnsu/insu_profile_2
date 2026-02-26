@@ -41,6 +41,18 @@ const projectSlideTop = () => {
         slidesPerView: 5,
         spaceBetween: 20,
         allowTouchMove: false,
+        loopAdditionalSlides: 10,
+        breakpoints: {
+            1440: {
+            slidesPerView: 4,
+            },
+            768: {
+            slidesPerView: 3,
+            },
+            480: {
+            slidesPerView: 2.5,
+            }
+        }
     });
 }
 const projectSlideBottom = () => {
@@ -54,6 +66,18 @@ const projectSlideBottom = () => {
         slidesPerView: 5,
         spaceBetween: 20,
         allowTouchMove: false,
+        loopAdditionalSlides: 10,
+        breakpoints: {
+            1440: {
+            slidesPerView: 4,
+            },
+            768: {
+            slidesPerView: 3,
+            },
+            480: {
+            slidesPerView: 2.5,
+            }
+        }
     });
 }
 
@@ -91,7 +115,7 @@ const effectMotion = () => {
 
     const mm = gsap.matchMedia();
 
-    // 🖥 desktop
+    // desktop
     mm.add("(min-width: 1441px)", () => {
         gsap.timeline({
         scrollTrigger: {
@@ -109,7 +133,7 @@ const effectMotion = () => {
         );
     });
 
-    // 💻 tablet
+    // tablet
     mm.add("(max-width: 1440px) and (min-width: 769px)", () => {
         gsap.timeline({
         scrollTrigger: {
@@ -127,7 +151,7 @@ const effectMotion = () => {
         );
     });
 
-    // 📱 mobile
+    // mobile
     mm.add("(max-width: 768px)", () => {
         gsap.timeline({
         scrollTrigger: {
