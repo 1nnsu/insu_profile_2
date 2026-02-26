@@ -2,7 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", function(e){
     // canvas();
-    effectMotion();
+    // effectMotion();
+    effectMotion2();
+    projectSlideTop();
+    projectSlideBottom();
 })
 
 
@@ -26,6 +29,35 @@ const canvas =() => {
     });
 }
 
+// project section
+const projectSlideTop = () => {
+    var swiper = new Swiper(".p-slide-top", {
+        loop:true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false
+        },
+        speed: 3000,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        allowTouchMove: false,
+    });
+}
+const projectSlideBottom = () => {
+    var swiper = new Swiper(".p-slide-bottom", {
+        loop:true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false
+        },
+        speed: 3000,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        allowTouchMove: false,
+    });
+}
+
+
 // effect section
 const effectMotion = () => {
     const slideWrap = document.querySelector('.effect');
@@ -44,12 +76,73 @@ const effectMotion = () => {
             trigger: slideWrap,
             start: "top top",
             end: "bottom top",
-            scrub: 1, // 스크롤과 부드럽게 동기화
+            scrub: 1, 
         }
     })
     .fromTo(".effect-img",
-        { scale: 0.3 },  // 시작 스케일
-        { scale: 1, ease: "power2.out" } // 끝 스케일
+        { scale: 0.3 },  
+        { scale: 1, ease: "power2.out" } 
     );
 };
 
+    const effectMotion2 = () => {
+    const slideWrap = document.querySelector('.effect');
+    if (!slideWrap) return;
+
+    const mm = gsap.matchMedia();
+
+    // 🖥 desktop
+    mm.add("(min-width: 1441px)", () => {
+        gsap.timeline({
+        scrollTrigger: {
+            trigger: slideWrap,
+            start: "top top",
+            end: "+=120%",
+            scrub: 1,
+            pin: true,
+            invalidateOnRefresh: true,
+        }
+        })
+        .fromTo(".effect-img",
+        { scale: 0.3 },
+        { scale: 1, ease: "power2.out" }
+        );
+    });
+
+    // 💻 tablet
+    mm.add("(max-width: 1440px) and (min-width: 769px)", () => {
+        gsap.timeline({
+        scrollTrigger: {
+            trigger: slideWrap,
+            start: "top top",
+            end: "+=100%", 
+            scrub: 1,
+            pin: true, 
+            invalidateOnRefresh: true,
+        }
+        })
+        .fromTo(".effect-img",
+        { scale: 0.5 },
+        { scale: 1 }
+        );
+    });
+
+    // 📱 mobile
+    mm.add("(max-width: 768px)", () => {
+        gsap.timeline({
+        scrollTrigger: {
+            trigger: slideWrap,
+            start: "top 85%",
+            end: "+=70%", 
+            scrub: 0.5,
+            pin: false,
+            invalidateOnRefresh: true,
+        }
+        })
+        .fromTo(".effect-img",
+        { scale: 0.4 },
+        { scale: 1}
+        );
+        
+    });
+    };
