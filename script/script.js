@@ -50,7 +50,8 @@ const projectSlideTop = () => {
             slidesPerView: 3,
             },
             480: {
-            slidesPerView: 2.5,
+            spaceBetween: 10,
+            slidesPerView: 2,
             }
         }
     });
@@ -75,7 +76,8 @@ const projectSlideBottom = () => {
             slidesPerView: 3,
             },
             480: {
-            slidesPerView: 2.5,
+            spaceBetween: 10,
+            slidesPerView: 2,
             }
         }
     });

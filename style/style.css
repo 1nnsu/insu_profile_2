@@ -224,7 +224,7 @@ section.project .project-btn .img-box > img {  }
 @media screen and (max-width: 1024px) { 
     .sec .title-name { width: 72px; }
     .sec .c-title { font-size: 36px; }
-    section.project .project-info ul { row-gap: 40px; column-gap: 40px; }
+    section.project .project-info ul { row-gap: 50px; column-gap: 50px; }
     section.project .project-info ul li .item .p-title-box { margin-bottom: 20px; }
     section.project .project-info ul li .item .p-explain-box .p-explain { font-size: 16px; }
     section.project .c-title-box .box-2 ul li .skill-icon { width: 28px; }
@@ -243,11 +243,10 @@ section.project .project-btn .img-box > img {  }
 @media screen and (max-width: 480px) { 
     .sec .c-title-box { margin-bottom: 40px; }
     section.project .c-title-box { flex-direction: column; align-items: flex-start; gap: 20px; }
-    section.project .project-info ul { row-gap: 30px; column-gap: 30px; }
     section.project .project-info ul li .item .p-explain-box { gap: 15px; }
     section.project .project-info ul li .item .p-explain-box .p-explain { font-size: 14px; }
     section.project .project-info ul li .item .p-title-box .p-title { padding-bottom: 10px; }
-    section.project .project-slider { margin: 50px 0 30px; }
+    section.project .project-slider { margin: 50px 0 30px; gap: 10px; }
 } 
 
 
@@ -364,7 +363,7 @@ section.work .work-menu-box ul li a { font-weight: 300; }
 section.work .work-menu-box ul li a .work-menu { padding-bottom: 5px; font-size: 24px; font-family: "Outfit", sans-serif; color: #B0B0B0; }
 section.work .work-menu-box ul li a.on .work-menu { color: var(--main-color); border-bottom: 1.5px solid var(--main-color); }
 section.work .work-menu-box ul li a .work-menu.link { position: relative; color: #E85D75; }
-section.work .work-menu-box ul li a .work-menu.link::after { content: url('../img/sub/work/link.png'); position: absolute; top: -10px; right: -16px;}
+section.work .work-menu-box ul li a .work-menu.link::after { content: ""; position: absolute; top: -10px; right: -16px; background: url('../img/sub/work/link.png') no-repeat center / contain; display: block; width: 20px; height: 30px;}
 
 section.work .work-box {  }
 section.work .work-box ul { display: grid; grid-template-columns: repeat(3, 1fr); row-gap: 40px; column-gap: 30px; }
@@ -390,15 +389,26 @@ section.work .work-box ul li .item .work-btn-div .work-btn a { padding: 10px 0; 
     section.work .work-box ul li .item .work-btn-div { gap: 10px; }
 } 
 @media screen and (max-width: 1024px) { 
+    section.work .work-title-box .work-logo { width: 42px; }
+    section.work .work-title-box .work-title { font-size: 36px; }
+    section.work .work-menu-box ul li a .work-menu { font-size: 20px; }
+    section.work .work-menu-box ul li a .work-menu.link::after { top: -11px; right: -14px; width: 15px; }
     section.work .work-box ul li .item .work-name { font-size: 18px; }
     section.work .work-box ul li .item .work-btn-div { margin-top: 20px; }
     section.work .work-box ul li .item .work-tag-div .tag { font-size: 12px; padding: 5px 13px; }
     section.work .work-box ul li .item .work-btn-div .work-btn a { padding: 8px 0; font-size: 14px; }
 } 
 @media screen and (max-width: 768px) { 
+    section.work { padding: 120px 0; }
+    section.work .work-menu-box { margin: 25px 0; }
     section.work .work-box ul { display: grid; grid-template-columns: repeat(2, 1fr); }
 } 
 @media screen and (max-width: 480px) { 
+    section.work .work-menu-box ul { gap: 35px; }
+    section.work .work-title-box .work-logo { width: 36px; }
+    section.work .work-menu-box ul li a .work-menu.link::after {  }
+    section.work .work-title-box .work-title { font-size: 32px; }
+    section.work .work-menu-box ul li a .work-menu { font-size: 18px; }
     section.work .work-box ul { display: grid; grid-template-columns: repeat(1, 1fr); }
     section.work .work-box ul li .item .work-name { font-size: 16px; }
 } 

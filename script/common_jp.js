@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     headerScrollHandler();
     // bodyScroll();
     privacyUsePopup();
+    headerFixed();
 })
 document.addEventListener("scroll", function(){
     animationOnHandler();
@@ -56,6 +57,14 @@ const headerScrollHandler = () => {
         })
     }
 }
+const headerFixed = () => {
+    $(".scroll_move").click(function(e){  
+        var header_height = $('header').outerHeight(true);
+        e.preventDefault();       
+        $('html,body').animate({scrollTop:$(this.hash).offset().top - header_height}, 1000);
+    });
+}
+
 const animationOnHandler = () => {
     const countList = document.querySelectorAll('.ani');
     if (countList.length) {
