@@ -1,6 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+    cursor();
     // canvas();
     // effectMotion();
     effectMotion2();
@@ -8,6 +9,30 @@ document.addEventListener("DOMContentLoaded", function(e){
     projectSlideBottom();
 })
 
+
+// 마우스 커서
+const cursor =() => {
+    var cursor = document.querySelector('.cursor');
+    var links = document.querySelectorAll('a');
+    var hoverElements = document.querySelectorAll('view-box li, .menu-btn, .close-btn, span.go, .more, .about-me-nav ul li');
+    
+    document.addEventListener('mousemove', (e) => {
+        // 마우스 위치를 따라 커서 이동
+        cursor.style.left = `${e.clientX}px`; 
+        cursor.style.top = `${e.clientY}px`;
+    });
+    
+    // a 태그, div.tab, 슬라이드, all-contents 호버 시 커서 크기 변경
+    [...links, ...hoverElements].forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('large'); // 커서 크기 증가
+        });
+    
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('large'); // 커서 크기 원래대로
+        });
+    });
+}
 
 const canvas =() => {
     

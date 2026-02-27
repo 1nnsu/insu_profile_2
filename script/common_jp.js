@@ -61,7 +61,7 @@ const headerFixed = () => {
     $(".scroll_move").click(function(e){  
         var header_height = $('header').outerHeight(true);
         e.preventDefault();       
-        $('html,body').animate({scrollTop:$(this.hash).offset().top - header_height}, 1000);
+        $('html,body').animate({scrollTop:$(this.hash).offset().top - header_height}, 400);
     });
 }
 
@@ -78,7 +78,7 @@ const animationOnHandler = () => {
                 }
             });
         }, {
-            threshold: 0.5 // Adjust threshold as needed
+            threshold: 0.1 // Adjust threshold as needed
         });
         
         // Observe each .ani element
