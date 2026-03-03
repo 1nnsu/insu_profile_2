@@ -62,7 +62,7 @@ const projectSlideTop = () => {
             delay: 0,
             disableOnInteraction: false
         },
-        speed: 3000,
+        speed: 1500,
         slidesPerView: 5,
         spaceBetween: 20,
         allowTouchMove: false,
@@ -73,9 +73,9 @@ const projectSlideTop = () => {
             },
             768: {
             slidesPerView: 3,
+            spaceBetween: 10,
             },
             480: {
-            spaceBetween: 10,
             slidesPerView: 2,
             }
         }
@@ -88,7 +88,7 @@ const projectSlideBottom = () => {
             delay: 0,
             disableOnInteraction: false
         },
-        speed: 3000,
+        speed: 1500,
         slidesPerView: 5,
         spaceBetween: 20,
         allowTouchMove: false,
@@ -99,9 +99,9 @@ const projectSlideBottom = () => {
             },
             768: {
             slidesPerView: 3,
+            spaceBetween: 10,
             },
             480: {
-            spaceBetween: 10,
             slidesPerView: 2,
             }
         }
