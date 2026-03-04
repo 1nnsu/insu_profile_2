@@ -399,9 +399,21 @@ section.work .work-box ul li {  }
 section.work .work-box ul li .img-box { border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.03) ;  }
 section.work .work-box ul li .img-box .work-img {  }
 section.work .work-box ul li .item {  }
-section.work .work-box ul li .item .work-name { margin: 15px 0; font-size: 20px; font-weight: 700; transition: font-size 300ms; }
+section.work .work-box ul li .item .work-name { margin: 15px 0; font-size: 20px; font-weight: 700; transition: font-size 300ms; position: relative; }
+/* @기여도@ */
+section.work .work-box ul li .item .work-name.role::after {  font-size: 12px; font-weight: 500; background: #333; color: var(--white-color); font-family: 'SUIT'; border-radius: 3px; padding: 5px 10px; position: absolute;  right: 0; }
+/* 드림성모안과 기여도 */
+section.work .work-box ul li .item .work-name.dreameye-role::after { content: '기여도 65%'; }
+/* 레드브릭스 기여도 */
+section.work .work-box ul li .item .work-name.redbricks-role::after { content: '기여도 40%'; }
+/* 포천세계드론축제 기여도 */
+section.work .work-box ul li .item .work-name.pocheondrone-role::after { content: '기여도 50%'; }
+/* 99로우 기여도 */
+section.work .work-box ul li .item .work-name.law99-role::after { content: '기여도 50%';  }
+/* 카슐랭 기여도 */
+section.work .work-box ul li .item .work-name.carchelin-role::after { content: '기여도 90%';  }
 section.work .work-box ul li .item .work-tag-div { display: flex; align-items: center; gap: 10px; }
-section.work .work-box ul li .item .work-tag-div .tag { padding: 5px 20px; font-size: 14px;  font-family: 'SUIT'; border-radius: 5px; background: #ECECEC; transition: font-size 300ms;}
+section.work .work-box ul li .item .work-tag-div .tag { padding: 5px 20px; font-size: 14px;  font-family: 'SUIT'; border-radius: 5px; background: #ececec; color: var(--black-color); transition: font-size 300ms;}
 section.work .work-box ul li .item .work-btn-div { width: 100%; margin-top: 30px; display: flex; align-items: center; gap: 20px; }
 section.work .work-box ul li .item .work-btn-div .work-btn { width: calc(100%/2);  }
 section.work .work-box ul li .item .work-btn-div .work-btn a { padding: 10px 0; font-size: 16px; font-family: "Outfit", sans-serif;  display: block; border-radius: 5px; border: 1px solid var(--black-color); text-align: center; background-color: var(--white-color); transition: font-size 300ms; }
@@ -415,6 +427,7 @@ section.work .work-box ul li .item .work-btn-div .work-btn:hover a { color: var(
 @media screen and (max-width: 1440px) { 
     section.work .work-title-box .work-logo { width: 48px; }
     section.work .work-title-box .work-title { font-size: 42px; }
+    section.work .work-box ul li .item .work-name.role::after { font-size: 11px; }
 
     section.work .work-menu-box { margin: 40px 0; }
     section.work .work-menu-box ul li a .work-menu { font-size: 22px; }
@@ -431,11 +444,13 @@ section.work .work-box ul li .item .work-btn-div .work-btn:hover a { color: var(
     section.work .work-box ul li .item .work-btn-div { margin-top: 20px; }
     section.work .work-box ul li .item .work-tag-div .tag { font-size: 12px; padding: 5px 13px; }
     section.work .work-box ul li .item .work-btn-div .work-btn a { padding: 8px 0; font-size: 14px; }
+    section.work .work-box ul li .item .work-name.role::after { font-size: 10px; }
 } 
 @media screen and (max-width: 768px) { 
     section.work { padding: 120px 0; }
     section.work .work-menu-box { margin: 25px 0; }
     section.work .work-box ul { display: grid; grid-template-columns: repeat(2, 1fr); }
+    section.work .work-box ul li .item .work-name.role::after { font-size: 8px; padding: 5px 8px; }
 } 
 @media screen and (max-width: 480px) { 
     section.work .work-menu-box ul { gap: 35px; }
