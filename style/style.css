@@ -32,21 +32,7 @@ html::-webkit-scrollbar-thumb {background: var(--blue-gradient-color); border-ra
 ::selection { background-color:var(--main-color); color: var(--lemon-color); }
 
 
-/* default */
-*{
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    color : inherit;
-    box-sizing: border-box;
-    letter-spacing: inherit;
-    line-height: inherit;
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 html, body, a, button { cursor: none !important; }
 body{ font-family: 'Pretendard', sans-serif; font-weight: 400; font-size: 16px; letter-spacing: -0.04em; color: var(--black-color); cursor: none; }
 a{ color:inherit; }
@@ -69,9 +55,7 @@ select::-ms-expand{ display:none; }
 
 /* @ header @ */
 header { padding: 15px 0; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05); background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(10px);  }
-header .inner {  }
 header .header-wrap { display: flex; align-items: center; justify-content: space-between; }
-header .header-wrap .header-logo {  }
 header .header-wrap ul { display: flex; align-items: center; gap: 40px; }
 header .header-wrap ul li { font-size: 20px; font-family: "Outfit", sans-serif; transition: font-size 500ms; }
 
@@ -101,23 +85,18 @@ header .header-wrap ul li .h_hover:hover::after { width: 100%; left: 0; }
 } 
 
 /* @ main @ */
-main {  }
 main p { animation: font-size 300ms; display: inline-block; }
 .sec { min-height: 100vh; }
 
 /* --- main-visual section --- */
 section.main-visual { position: relative; display: flex; align-items: center; justify-content: center; background: var(--white-blue-gradient-color); }
-section.main-visual .inner { }
 section.main-visual .wrap { padding-bottom: 100px; display: flex; flex-direction: column; align-items: center; }
 section.main-visual .wrap .main-visual-title { margin: 40px 0 30px; display: inline-block; font-size: 96px; font-weight: 600; font-family: "Raleway", sans-serif; background: linear-gradient(90deg, #5188DC 0%, #3B65A2 80%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 section.main-visual .wrap .main-visual-text {  font-size: 48px; font-family: "Outfit", sans-serif; font-weight: 300; }
 
 /* 마우스 애니메이션 */
 section.main-visual .scroll_div { position: absolute; bottom: 60px; display: flex; align-items: center; justify-content: center;  flex-direction: column; }
-section.main-visual .scroll_div .mouse {  }
 section.main-visual .scroll_div .scroll_box { margin: 10px 0 15px; display: flex;flex-direction: column; align-items: center; }
-section.main-visual .scroll_div .scroll {  }
-section.main-visual .scroll_div .scroll_text {  }
 
 @media screen and (max-width: 1440px) { 
     section.main-visual .main-visual-logo { width: 72px; }
@@ -150,7 +129,6 @@ section.main-visual .scroll_div .scroll_text {  }
 /* --- overview section --- */
 #canvas-basic { position: absolute; display: block; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
 section.overview { background: var(--blue-gradient-color); color: var(--white-color); }
-section.overview .wrap {  }
 section.overview .wrap ul { display: grid; grid-template-columns: repeat(2, 1fr); }
 section.overview .wrap ul li { height: 50vh; display: flex; align-items: center; justify-content: center;  gap: 40px; }
 section.overview .wrap ul li:nth-of-type(1) { border-bottom: 1px solid var(--white-color); border-right: 1px solid var(--white-color); }
@@ -159,7 +137,6 @@ section.overview .wrap ul li:nth-of-type(3) { border-right: 1px solid var(--whit
 section.overview .wrap ul li .item { display: flex; flex-direction: column; gap: 40px; }
 section.overview .wrap ul li .item .box1 { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
 section.overview .wrap ul li .item .box2 { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
-section.overview .wrap ul li .item .number {  }
 section.overview .wrap ul li .item .overview-title { font-size: 42px; font-family: "Raleway", sans-serif; transition: font-size 300ms; }
 section.overview .wrap ul li .item .overview-text { font-size: 24px; font-weight: 300; font-family: "Outfit", sans-serif; transition: font-size 300ms; }
 
@@ -190,7 +167,6 @@ section.overview .wrap ul li .item .overview-text { font-size: 24px; font-weight
 
 /* --- project,about common-title --- */
 .sec .c-title-box { margin-bottom: 60px; }
-.sec .title-name {  }
 .sec .c-title { font-size: 48px; display: block; font-family: "Raleway", sans-serif; color: var(--white-color); }
 
 /* --- project section --- */
@@ -198,14 +174,9 @@ section.project { padding: 100px 0; background: var(--white-color); overflow: hi
 section.project .c-title { color: var(--black-color); transition: font-size 300ms; }
 
 section.project .c-title-box { display: flex; align-items: flex-end; justify-content: space-between; }
-section.project .c-title-box .box-2 {  }
 section.project .c-title-box .box-2 ul { display: flex; align-items: center; gap: 20px; }
-section.project .c-title-box .box-2 ul li {  }
 
-section.project .project-info { }
 section.project .project-info ul { display: grid; display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 80px; column-gap: 80px; }
-section.project .project-info ul li { }
-section.project .project-info ul li .item { }
 section.project .project-info ul li .item .p-title-box { margin-bottom: 30px; }
 section.project .project-info ul li .item .p-title-box .p-title { padding-bottom: 20px; font-size: 24px; font-family: "Outfit", sans-serif; border-bottom: 1px solid var(--black-color); transition: font-size 300ms; }
 section.project .project-info ul li .item .p-explain-box { display: flex; flex-direction: column; gap: 20px; }
@@ -220,7 +191,6 @@ section.project .project-btn { width: 160px; margin: 0 auto; overflow: hidden; b
 section.project .project-btn > a { width: 100%; display: flex; align-items: center; justify-content: center; padding: 10px 0; display: flex; align-items: center; gap: 10px; border-radius: 5px; border: 1px solid var(--black-color); overflow: hidden; background: var(--white-color); }
 section.project .project-btn > a p { position: relative; z-index: 1; }
 section.project .project-btn .img-box { display: flex; gap: 1px; align-items: center; position: relative; z-index: 1; }
-section.project .project-btn .img-box > img {  }
 
 /* viewmore hover */
 section.project .project-btn a { transition: all 300ms; }
@@ -304,16 +274,13 @@ section.about .about-wrap .content-box { max-width: 950px; width: 100%; }
 section.about .about-wrap .content-box .about-blink { margin: 0 auto; width: 520px; height: 100px; position: relative; top: -100px;  }
 section.about .about-wrap .content-box .about-blink .blink { position: absolute; top: 0; left: 0; }
 section.about .about-wrap .content-box ul { display: flex; flex-direction: column; gap: 40px; }
-section.about .about-wrap .content-box ul li {  }
 section.about .about-wrap .content-box ul li:hover a { background: #222; border-bottom: 1px solid var(--lemon-color); border-radius: 5px 5px 0 0; }
 section.about .about-wrap .content-box ul li .item { display: flex; align-items: center; gap: 10px; }
 section.about .about-wrap .content-box ul li a { transition: all 300ms; padding: 20px 10px; display: flex; align-items: center; justify-content: space-between;  border-bottom: 1px solid var(--white-color); }
 section.about .about-wrap .content-box ul li .item .item-text { font-size: 24px; font-family: "Outfit", sans-serif; transition: font-size 300ms; }
 section.about .about-wrap .content-box ul .arrow-box { display: flex; align-items: center; gap: 2px; }
-section.about .about-wrap .content-box ul .arrow-box .arrow {  }
 
 @media screen and (max-width: 1440px) { 
-    section.about .about-wrap { }
     section.about .about-wrap .img-box > img { max-width: unset; width: 360px; }
     section.about .about-wrap .content-box .about-blink .blink { width: 480px; }
     section.about .about-wrap .content-box ul { gap: 30px; }
@@ -376,29 +343,21 @@ footer .footer-text { font-size: 14px; color: var(--white-color); font-family: "
 
 /* @ sub(projects) @ */
 
-.sub {  }
-
 /* --- sub work section */
 section.work { padding: 150px 0; }
 section.work .work-title-box { display: flex; align-items: center; gap: 20px; justify-content: center; }
-section.work .work-title-box .work-logo {  }
 section.work .work-title-box .work-title { font-size: 48px; color: var(--main-color); font-family: "Raleway", sans-serif; transition: font-size 300ms; }
 
 section.work .work-menu-box { margin: 50px 0 50px; }
 section.work .work-menu-box ul { display: flex; align-items: center; justify-content: center; gap: 50px; }
-section.work .work-menu-box ul li {  }
 section.work .work-menu-box ul li a { font-weight: 300; }
 section.work .work-menu-box ul li a .work-menu { padding-bottom: 5px; font-size: 24px; font-family: "Outfit", sans-serif; color: #B0B0B0; transition: font-size 300ms; }
 section.work .work-menu-box ul li a.on .work-menu { color: var(--main-color); border-bottom: 1.5px solid var(--main-color); }
 section.work .work-menu-box ul li a .work-menu.link { position: relative; color: #E85D75; }
 section.work .work-menu-box ul li a .work-menu.link::after { content: ""; position: absolute; top: -10px; right: -16px; background: url('../img/sub/work/link.png') no-repeat center / contain; display: block; width: 20px; height: 30px;}
 
-section.work .work-box {  }
 section.work .work-box ul { display: grid; grid-template-columns: repeat(3, 1fr); row-gap: 90px; column-gap: 30px; }
-section.work .work-box ul li {  }
 section.work .work-box ul li .img-box { border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.03) ;  }
-section.work .work-box ul li .img-box .work-img {  }
-section.work .work-box ul li .item {  }
 section.work .work-box ul li .item .work-name { margin: 15px 0; font-size: 20px; font-weight: 700; transition: font-size 300ms; position: relative; }
 /* @기여도@ */
 section.work .work-box ul li .item .work-name.role::after {  font-size: 12px; font-weight: 500; background: #333; color: var(--white-color); font-family: 'SUIT'; border-radius: 3px; padding: 5px 10px; position: absolute;  right: 0; }
@@ -455,7 +414,6 @@ section.work .work-box ul li .item .work-btn-div .work-btn:hover a { color: var(
 @media screen and (max-width: 480px) { 
     section.work .work-menu-box ul { gap: 35px; }
     section.work .work-title-box .work-logo { width: 36px; }
-    section.work .work-menu-box ul li a .work-menu.link::after {  }
     section.work .work-title-box .work-title { font-size: 32px; }
     section.work .work-menu-box ul li a .work-menu { font-size: 18px; }
     section.work .work-box ul { display: grid; grid-template-columns: repeat(1, 1fr); }
