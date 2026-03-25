@@ -53,6 +53,46 @@ select::-ms-expand{ display:none; }
 /* common */
 .tran { transition: all 300ms; }
 
+/* @기여도@ */
+
+/* 1-web html */
+section.work .work-box ul li .item .work-name.role::after { content: '기여도 100%'; font-size: 12px; font-weight: 500; background: #333; color: var(--white-color); font-family: 'SUIT'; border-radius: 3px; padding: 5px 10px; position: absolute;  right: 0; }
+/* 드림성모안과 기여도 */
+section.work .work-box ul li .item .work-name.dreameye-role::after { content: '기여도 65%'; }
+/* 99로우 기여도 */
+section.work .work-box ul li .item .work-name.law99-role::after { content: '기여도 50%';  }
+/* 레드브릭스 기여도 */
+section.work .work-box ul li .item .work-name.redbricks-role::after { content: '기여도 40%'; }
+/* 포천세계드론축제 기여도 */
+section.work .work-box ul li .item .work-name.pocheondrone-role::after { content: '기여도 50%'; }
+/* 카슐랭 기여도 */
+section.work .work-box ul li .item .work-name.carchelin-role::after { content: '기여도 90%';  }
+/* TV조선 기여도 */
+section.work .work-box ul li .item .work-name.tvchosun-role::after { content: '기여도 100%';  }
+/* 트립포유 기여도 */
+section.work .work-box ul li .item .work-name.trip4you-role::after { content: '기여도 100%';  }
+
+/* 2-landing html */
+/* 트립포유 기여도 */
+section.work .work-box ul li .item .work-name.yogurtboy-role::after { content: '기여도 100%';  }
+/* 메이크웍스 기여도 */
+section.work .work-box ul li .item .work-name.makeworks-role::after { content: '기여도 100%';  }
+/* GPA Korea 기여도 */
+section.work .work-box ul li .item .work-name.gpa-korea-role::after { content: '기여도 100%';  }
+/* 법무법인 PK 기여도 */
+section.work .work-box ul li .item .work-name.pk-busan-role::after { content: '기여도 100%';  }
+/* 한와담 기여도 */
+section.work .work-box ul li .item .work-name.hanwadam-role::after { content: '기여도 100%';  }
+/* 웰라이프 기여도 */
+section.work .work-box ul li .item .work-name.wellife-role::after { content: '기여도 100%';  }
+/* 아트와 기여도 */
+section.work .work-box ul li .item .work-name.artwa-role::after { content: '기여도 100%';  }
+/* D-WMS 기여도 */
+section.work .work-box ul li .item .work-name.d-wms-role::after { content: '기여도 100%';  }
+/* 법무법인 제네시스 기여도 */
+section.work .work-box ul li .item .work-name.genesislaw-role::after { content: '기여도 100%';  }
+
+
 /* @ header @ */
 header { padding: 15px 0; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05); background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(10px);  }
 header .header-wrap { display: flex; align-items: center; justify-content: space-between; }
@@ -359,18 +399,6 @@ section.work .work-menu-box ul li a .work-menu.link::after { content: ""; positi
 section.work .work-box ul { display: grid; grid-template-columns: repeat(3, 1fr); row-gap: 90px; column-gap: 30px; }
 section.work .work-box ul li .img-box { border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.03) ;  }
 section.work .work-box ul li .item .work-name { margin: 15px 0; font-size: 20px; font-weight: 700; transition: font-size 300ms; position: relative; }
-/* @기여도@ */
-section.work .work-box ul li .item .work-name.role::after {  font-size: 12px; font-weight: 500; background: #333; color: var(--white-color); font-family: 'SUIT'; border-radius: 3px; padding: 5px 10px; position: absolute;  right: 0; }
-/* 드림성모안과 기여도 */
-section.work .work-box ul li .item .work-name.dreameye-role::after { content: '기여도 65%'; }
-/* 레드브릭스 기여도 */
-section.work .work-box ul li .item .work-name.redbricks-role::after { content: '기여도 40%'; }
-/* 포천세계드론축제 기여도 */
-section.work .work-box ul li .item .work-name.pocheondrone-role::after { content: '기여도 50%'; }
-/* 99로우 기여도 */
-section.work .work-box ul li .item .work-name.law99-role::after { content: '기여도 50%';  }
-/* 카슐랭 기여도 */
-section.work .work-box ul li .item .work-name.carchelin-role::after { content: '기여도 90%';  }
 section.work .work-box ul li .item .work-tag-div { display: flex; align-items: center; gap: 10px; }
 section.work .work-box ul li .item .work-tag-div .tag { padding: 5px 20px; font-size: 14px;  font-family: 'SUIT'; border-radius: 5px; background: #ececec; color: var(--black-color); transition: font-size 300ms;}
 section.work .work-box ul li .item .work-btn-div { width: 100%; margin-top: 30px; display: flex; align-items: center; gap: 20px; }
